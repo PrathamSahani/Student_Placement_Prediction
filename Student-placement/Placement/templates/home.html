@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" type="x-icon" href="https://i.ibb.co/VH7qsyW/Google-Chrome-icon-February-2022-svg.png">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <style>
+        
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    {% comment %} background-color: rgb(234, 211, 211); {% endcomment %}
+    animation: num 3s ease-in-out;
+}
+@keyframes num {
+
+    0% {
+        transform: translateY(-100%) scaleY(0);
+    }
+
+    100% {
+
+        transform: translateY(0) scaleY(1);
+
+    }
+}
+.wrapper{
+    height: 100vh;
+}
+.top-bar{
+    width: 80%;
+    height: 50px;
+    /* margin: 20px auto; */
+
+}.logo{
+    width: 20%;
+    float: left;
+}.logo img{
+    width: 150px;
+    /* margin: 8px auto; */
+    margin-left: 100px;
+    cursor: pointer;
+}
+.menu-bar
+{
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+.menu-bar ul li{
+    display:inline block;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    margin: 15px 20px;
+    padding-top :5px; ;
+}
+.active,.menu-bar ul li:hover{
+    border-bottom: 2px solid #2c972c;
+}
+.search-box{
+    width: 20%;
+    float: right;
+}
+.input-search{
+    margin: 11px auto;
+    display: inline-flex;
+    border-bottom: 1px solid #2c972c;
+}
+.input-search input{
+    float: right;
+    padding: 5px;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+.hero
+{
+    width: 50%;
+    height: 80%;
+    margin-left: -120px;
+    float: left;
+    font-weight: bold;
+    margin-top: 140px;
+}
+.hero-text h1{
+    margin-left: 90px;
+    line-height: 40px;
+    font-weight: bold;
+    font-style : italic;
+}
+.hero-text p{
+    margin-left: 90px;
+}
+.hero-text h1::after{
+    content: '';
+    width: 150px;
+    height: 2px;
+    background: #2c972c;
+    top:27%;
+    left: 28%;
+    position: absolute;
+
+}
+.hero-banner .btn{
+    margin-top: 430px;
+    margin-left: -675px;
+    width: 100px;
+    height: 50px;
+    color:  rgb(114, 93, 93); 
+    border-radius: 10px;
+    font-weight: bold;
+    background-color : #84e884;
+    cursor: pointer;
+
+}
+.hero-banner .btn:hover{
+    color: #84e884;
+    background-color: rgb(114, 93, 93);
+}
+.pla .img{
+    margin-left: 730px;
+    margin-top: -410px ;
+}
+</style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="">
+            </div>
+            <div class="menu-bar">
+                <ul>
+                    <li class="active">welcome</li>
+                </ul>
+            </div>
+            <div class="search-box">
+                <div class="input-search">
+                    <input type="text" placeholder="Search">
+                    <div class="search-icon">
+                        <span><i class="fas fas-search"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>WELCOME TO THE STUDENT PLACEMENT PREDICTION SYSTEM !</h1>
+                    <p>this is a student placement prediction system for college student you can predict through this
+                        you placement... <br>
+                        NOTE: It's just a prediction you can change your future by doing "HARDWORK"</p>
+                     </div>
+                    </div>
+                      <div class="hero-banner">
+                <form action ="predict">
+                <button class="btn" type="submit">Click Here</button></form>
+            </div>
+            <div class="pla">
+                <img class="img" src="{% static 'images/img.png' %}" alt="">
+            </div>
+            <small><b>Explore More Trending
+
+            </b></small>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+{% comment %} <img  alt=""> {% endcomment %}

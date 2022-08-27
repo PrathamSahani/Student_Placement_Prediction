@@ -1,0 +1,218 @@
+{%load static%}
+<!-- {%load static%} -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF=8">
+    <title> Prediction page</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            border-collapse: separate;
+        }
+
+        .menu-bar ul li {
+            display: inline block;
+            list-style: none;
+            text-decoration: none;
+            color: #000;
+            margin: 15px 20px;
+            padding-top: 5px;
+
+        }
+
+        .menu-bar .active {
+            font-weight: bold;
+        }
+
+        .active .menu-bar ul li:hover {
+            border-bottom: 2px solid #2c972c;
+
+        }
+
+        .logo {
+            width: 20%;
+            float: left;
+        }
+
+        .logo img {
+            width: 150px;
+            /* margin: 8px auto; */
+            margin-left: 100px;
+            cursor: pointer;
+        }
+
+        body {
+            /* background-image : url("{%static '\DiabetesPrediction\images\img4 (4).jpg'%}"); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: white;
+            animation: num 3s ease-in-out;
+        }
+
+        @keyframes num {
+
+            0% {
+                transform: translateY(-100%) scaleY(0);
+            }
+
+            100% {
+
+                transform: translateY(0) scaleY(1);
+
+            }
+
+        }
+
+        .main {
+            position: absolute;
+            top: 130px;
+            right: 180px;
+            /* justify-content: center; */
+            width: 550px;
+            background-color: #e6f1e6;
+            border-radius: 15px;
+            align-items: center;
+            height: 72vh;
+            border: 1px solid blue;
+
+        }
+
+        .main:hover {
+            box-shadow: 50px 0px 20px 0px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .menu-bar .table {
+            margin-left: -150px;
+           
+        }
+
+       
+        h1 {
+            font-family: Times New Roman;
+            margin: 20px, 0;
+            color: rgb(18, 17, 17);
+            font-size: 30px;
+            font-weight: lighter;
+            animation-delay: 3.5s;
+            font-style: italic;
+        }
+
+        input[type=submit] {
+            background-color: rgb(127, 216, 131);
+            border: 1px solid black;
+            color: rgb(23, 22, 22);
+            padding: 10px 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius: 10px;
+
+        }
+
+        input {
+            padding: 20px, 0;
+            margin: 20px, 0;
+        }
+
+        p {
+            color: #ffffff;
+        }
+
+        .row em {
+            color: black;
+            font-style: italic;
+
+
+        }
+
+        .main .bold {
+            /* font-weight: bold; */
+            font-style: italic;
+        }
+
+        .wrapper .predict {
+            font-weight: bold;
+
+        }
+        .logo .title1{
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+     
+    <div class="wrapper">
+        <div class="top-bar">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="">
+                <span class="title1">NOTE :=</span><br>
+                <span class="title"> Electrical And Communication: 0</span><br>
+                <span  class="title"> Computer Science: 1</span><br>
+                <span  class="title"> Information Technology: 2</span><br>
+                <span  class="title"> Mechanical: 3</span><br>
+                <span  class="title"> Electrical: 4</span><br>
+                <span  class="title"> Civil: 5</span><br>
+                <span class="title1">NOTE 1 :=</span><br>
+                <span>Hostel Live: 1</span><br>
+                <span>Hostel  Not Live: 0</span><br>
+
+            </div>
+            <div class="menu-bar">
+                <ul>
+                    <li class="active">
+                        <h3>Check Your Placement Prediction !</h3>
+                    </li>
+                    <img class="table" src="{% static 'images/img8.png' %}" alt="">
+                </ul>
+            </div>
+    
+
+        </div>
+        <p><em>WELCOME TO THE PREDICT PAGE</em></P>
+        <div align='center' class="main">
+            <h1>It's just a prediction; work hard and get success🤔</h1> <br />
+            <form action="result">
+                <table>
+                    <tr>
+                        <td align="right"><span class="bold">Age:</span></td>
+                        <td align="left"><input type="text" name="n1"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><span class="bold">Gender:</span></td>
+                        <td align="left"><input type="text" name="n2"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><span class="bold">Stream:</span></td>
+                        <td align="left"><input type="text" name="n3"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><span class="bold">Internships:</span></td>
+                        <td align="left"><input type="text" name="n4"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><span class="bold">CGPA:</span></td>
+                        <td align="left"><input type="text" name="n5"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><span class="bold">Hostal:</span></td>
+                        <td align="left"><input type="text" name="n6"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><span class="bold">Histroy Of Backlog:</span></td>
+                        <td align="left"><input type="text" name="n7"></td>
+                    </tr>
+
+                </table>
+                <input class="predict" type="submit" value="PREDICT">
+            </form>
+            <div class="row">
+                <h2><em>{{result2}}</em></h2>
+            </div>
+        </div>
+</body>
+
+</html>
