@@ -10,7 +10,7 @@ def home(request):
 def predict(request):
     return render(request, "predict.html")
 def result(request):
-    dataframe=pd.read_csv(r'C:\Users\rsp.tech Solution\OneDrive\Desktop\GITHUB ACCOUNT\Student_Placement_Prediction\Student-placement\collegePlace.csv')
+    dataframe=pd.read_csv('collegePlace.csv')
     dataframe['Gender'].replace({'Male':0, 'Female':1},inplace=True)
     dataframe['Stream'].replace({'Electronics And Communication':0, 'Computer Science':1, 'Information Technology':2,'Mechanical':3,'Electrical':4,'Civil':5},inplace=True)
     Y = dataframe["PlacedOrNot"]
