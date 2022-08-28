@@ -5,8 +5,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import pandas as pd
 
-def home(request):
-    return render(request, "home.html")
+def index(request):
+    return render(request, "index.html")
 def predict(request):
     return render(request, "predict.html")
 def result(request):
